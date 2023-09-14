@@ -64,3 +64,11 @@ class VistaSignUp(Resource):
 
         except Exception as e:
             return {'mensaje': 'A ocurrido un error, por favor vuelve a intentar', 'error': str(e)}, 503
+
+
+class VistaPong(Resource):
+
+    def get(self):
+        # Retorna pong
+        # Endpoint http://localhost:5000/users/ping
+        return 'pong', 200

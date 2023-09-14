@@ -2,7 +2,7 @@ from src import create_app
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from .models import db
-from .views import ViewUsers, VistaSignUp
+from .views import ViewUsers, VistaSignUp, VistaPong
 
 app = create_app('default')
 app_context = app.app_context()
@@ -14,5 +14,6 @@ db.create_all()
 api = Api(app)
 api.add_resource(ViewUsers, '/users/all')
 api.add_resource(VistaSignUp, '/users/signup')
+api.add_resource(VistaPong, '/users/ping')
 
 jwt = JWTManager(app)
