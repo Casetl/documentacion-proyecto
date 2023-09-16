@@ -34,3 +34,10 @@ class VistaSignUp(Resource):
 
         except Exception as e:
             return {'mensaje': 'Por favor ingresar todos los campos', 'error': str(e)}, 400
+
+class VistaPong(Resource):
+
+    def get(self):
+        # Retorna pong
+        # Endpoint http://localhost:3000/
+        return 'pong del orquestador', 200
