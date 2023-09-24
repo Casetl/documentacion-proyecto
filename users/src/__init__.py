@@ -1,8 +1,7 @@
 import os
-from os import environ
 from flask import Flask
 
-DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///users.db') if environ.get(
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///users.db') if os.environ.get(
     'DATABASE_URL') != 'default' else 'sqlite:///users.db'
 
 
