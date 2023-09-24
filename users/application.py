@@ -19,4 +19,4 @@ api.add_resource(VistaPong, '/')
 jwt = JWTManager(application)
 
 if __name__ == "__main__":
-    application.run(host = "0.0.0.0", port = 3001, debug = True)
+    application.run(host = "0.0.0.0", port = 3001, debug = False)
